@@ -3,10 +3,7 @@ pragma solidity >=0.4.22 <0.7.0;
 /**
  * @title   Standard ERC20 token
  * @author  github.com/Akif-G
- * @notice  Basic ERC20 token implementation, Not recommended for commercial usage.
- * @dev     Implementation is based on: https://eips.ethereum.org/EIPS/eip-20
- * @dev     Implementation of the basic standard token, can be used for referance without guarranty.
- *          https://github.com/Akif-G/ERC20-Basic-Token.git
+ * @notice  different Name, but the same implementation with:: github.com/Akif-G/erc20_MehmetGultekin.sol
  */
 
 contract MehmetGultekinToken{
@@ -25,11 +22,11 @@ contract MehmetGultekinToken{
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 
     function name() public pure returns (string memory){
-        return "MehmetGultekinToken";
+        return "GultekinMehmetToken";
     }
 
     function symbol() public pure returns (string memory){
-        return "MGT";
+        return "GMT";
     }
 
     function totalSupply() public view returns (uint256){
