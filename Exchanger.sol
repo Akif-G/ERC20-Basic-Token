@@ -5,7 +5,7 @@ pragma solidity >=0.4.22 <0.7.0;
  * @author  github.com/Akif-G
  * @notice  Basic ERC20 token Exchange mechanism implementation, Not recommended for commercial usage.
  * @dev     Implementation of the basic standard token, can be used for referance without guarranty.
- *          https://github.com/Akif-G/ERC20-Basic-Token.git
+ *          https://github.com/Akif-G/ERC20-Basic-Token
  */
 
 ///import "erc20_GultekinMehmet.sol";
@@ -17,19 +17,26 @@ contract Exchanger{
     address payable _wallet = address(uint160(nftAddress));
     address payable House;
 
+    /// @notice House is set via deploying contract
     constructor()public{
         House = msg.sender;
     }
 
+    /// @notice returns the contract cretor's address if needed. 
     function getExchangerAddress()public view returns(address){
         return House;
     }
 
+    /// @notice returns contract address, to be used for validating the exchange contract
     function getContactAddress()public view returns(address){
         return _wallet;
     }
 
-
+    /// @notice transfers two tokens from contract addresses, an amount and permissions.
+    /// @dev    requires validated permissions and enough token, from both House and User. House gets the spent token and gives the requested one.
+    /// @param  from_addrs address of the token that will be spent  
+    /// @param  from_addrs address of the token that will be spent  
+    /// @param  amount amount of the tokens that will be converted  
     function transfer(address from_addrs, address to_addrs, uint256 amount) public returns(bool success){
         MehmetGultekinToken first = MehmetGultekinToken(from_addrs);
         MehmetGultekinToken second = MehmetGultekinToken(to_addrs);

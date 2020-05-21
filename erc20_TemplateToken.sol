@@ -3,7 +3,10 @@ pragma solidity >=0.4.22 <0.7.0;
 /**
  * @title   Standard ERC20 token
  * @author  github.com/Akif-G
- * @notice  different Name, but the same implementation with:: github.com/Akif-G/erc20_MehmetGultekin.sol
+ * @notice  Basic ERC20 token implementation as template, Not recommended for commercial usage.
+ * @dev     Implementation is based on: https://eips.ethereum.org/EIPS/eip-20
+ * @dev     Implementation of the basic standard token, can be used for referance without guarranty.
+ * @dev     https://github.com/Akif-G/ERC20-Basic-Token
  */
 
 contract MehmetGultekinToken{
@@ -45,6 +48,7 @@ contract MehmetGultekinToken{
         return _allowed[_owner][_spender];
     }
 
+    ///@notice  transfers the token with specified amount (_value) to given address(_to) 
     function transfer(address _to, uint256 _value) public returns (bool success){
         assert(_value>0);
         require(_value <= _balances[msg.sender],"Needs a positive input");
@@ -56,6 +60,8 @@ contract MehmetGultekinToken{
         return true;
   }
 
+    ///@notice  transfers the token with specified amount (_value) to given address(_to)  from the given address if allowence is given to caller.
+    ///@dev     transfer need to be "allowed" with function allowence. 
     function transferFrom( address _from, address _to, uint256 _value) public returns (bool){
         require(_value <= _balances[_from],"Not enough token");
         require(_value <= _allowed[_from][msg.sender], "Not allowed by owner");
@@ -68,6 +74,7 @@ contract MehmetGultekinToken{
         return true;
     }
 
+    ///@notice   gives allowence to delegate for usage of called Tokens.
     function approve(address _delegate, uint256 _value) public returns (bool success){
         _allowed[msg.sender][_delegate] = _value;
         emit Approval(msg.sender, _delegate, _value);
