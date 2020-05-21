@@ -14,7 +14,7 @@ contract MehmetGultekinToken{
     string private _name;
     string private _symbol;
 
-    constructor(uint256 _total, string memory name, string memory symbol) public {
+    constructor(string memory name, string memory symbol, uint256 _total) public {
         assert(_total>0);
        _totalSupply = _total;
        _name = name;
@@ -56,15 +56,15 @@ contract MehmetGultekinToken{
         return true;
   }
 
-    function transferFrom( address from, address _to, uint256 _value) public returns (bool){
-        require(_value <= _balances[from],"Not enough token");
-        require(_value <= _allowed[from][msg.sender], "Not allowed by owner");
+    function transferFrom( address _from, address _to, uint256 _value) public returns (bool){
+        require(_value <= _balances[_from],"Not enough token");
+        require(_value <= _allowed[_from][msg.sender], "Not allowed by owner");
         require(_to != address(0), "Provide an address");
 
-        _balances[from] = _balances[from] - (_value);
+        _balances[_from] = _balances[_from] - (_value);
         _balances[_to] = _balances[_to] + (_value);
-        _allowed[from][msg.sender] = _allowed[from][msg.sender] - (_value);
-        emit Transfer(from, _to, _value);
+        _allowed[_from][msg.sender] = _allowed[_from][msg.sender] - (_value);
+        emit Transfer(_from, _to, _value);
         return true;
     }
 
