@@ -80,5 +80,4 @@ contract MehmetGultekinToken{
         emit Approval(msg.sender, _delegate, _value);
         return true;
     }
-
 }
