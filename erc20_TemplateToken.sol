@@ -44,7 +44,9 @@ contract MehmetGultekinToken{
         return _balances[_owner];
     }
 
+    ///@dev return all, if the same person.
     function allowance(address _owner, address _spender) public view returns (uint256 remaining){
+        if(_owner==_spender) return balanceOf(_spender);
         return _allowed[_owner][_spender];
     }
 

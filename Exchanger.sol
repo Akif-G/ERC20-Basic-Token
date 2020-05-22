@@ -8,8 +8,6 @@ pragma solidity >=0.4.22 <0.7.0;
  *          https://github.com/Akif-G/ERC20-Basic-Token
  */
 
-///import "erc20_GultekinMehmet.sol";
-///import "erc20_MehmetGultekin.sol";
 import "erc20_TemplateToken.sol";
 
 contract Exchanger{
