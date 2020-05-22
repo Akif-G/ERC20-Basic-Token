@@ -10,35 +10,16 @@ In this homework we will implement an ERC20 tokens, which are described as digit
 
 #### Setup of Creator address:
 
-```mermaid
-graph LR
-A[Creator] -- Deploys token --> B((MGT))
-A[Creator] -- Deploys token --> C((GMT))
-B -- gives allowence to it --> D((Exchange))
-A-- creates a exchange contract -->D
-C -- gives allowence to it --> D((Exchange))
+![](https://lh6.googleusercontent.com/a1IaZEtQD7SRFJusm0XAhwaph0RJvsb2cAYBVv2oK-0VWqWBOXBEbRl-8bde68D-S9l9auNh_Vt76hcsEES4K4fS49OULJz437aCLmKwzTcZm4w3F1cS9KWZgmeuecYOP1pPgyv4)
 
-E[Customer]-- uses transfer function -->D
-```
 #### transfer Function:
 
-  ```mermaid
-sequenceDiagram
-Note over Customer: wanted to convert <br>MGT to GMT
-Note over Customer,Exchange Contract: validated <br>Exchange Contract
-Customer->>+Exchange Contract:transfer MGT to GMT
-Note over Exchange Contract: checks for the<br>validations<br>on token contracts
-Exchange Contract-->>Creator: here, take his MGT token
-Creator-->>Exchange Contract: here, take my GMT token
-Exchange Contract->>-Customer:here, your GMT.
-```
-
+![](https://lh6.googleusercontent.com/9yG3rZpUV7t2S24m-F0iJRDeO0t9HGKEl0yElgCiQcL3QkRHcuoOyx4w97iD2nMgfBF7d6uyFLdRQzgyPsL-178ucjBEBj-ver9z611Q3_ZPiPqOXXGQSWs3eZNTmGOwFW7bg9gv)
 
 ## Creating ERC20 Tokens
 
 In this stage, we are going to create two ERC20 token with specified functions that we implemented in our template code.
 
-  
 
 ### First ERC20 Token: MGT
 
@@ -96,7 +77,6 @@ We used the same contract code, and specified the name, symbol and total Supply 
 
 The address of the second Token’s Contract (GMT):
 
--   
     
 -   [0x0deb0de1a48d15367d2ee0522384757117b9cf37](https://ropsten.etherscan.io/address/0x0deb0de1a48d15367d2ee0522384757117b9cf37)
     
@@ -155,7 +135,7 @@ Firstly we need to give the exchange Contract an approval via token’ contracts
 
 Secondly, we can use transfer function of the Contract without hesitation. After this process the balances of Creator (as House) and the Customer (as Mehmet Gultekin) will be:
 
-![](https://lh4.googleusercontent.com/jl1Lot27gIuuTWrFzboN51ABL2mo0Y3WJ4Gpfbd3FU_PkLzNTfjUv_tkVyzHOvpA1pUUaDxKpJjpA5uF4WWdEO-R5czrKRhqTr3BxvhMxtoDrbK498dYJLdWG4KZoMu3T6V9Dz6d)  ![](https://lh4.googleusercontent.com/hiJ4NMmDranfUH-WBw-953uKJmPMzACZbfIgqz0mbJrbOIESX1alEZmRESC9MQ3g5JIxsylQEZaiCidp9W8tQq_p3qMh_5ml3Oc6eCmZRrfCyVQ7L6HRn0AazKyfEr46Ivh4Mjae)
+![](https://lh4.googleusercontent.com/jl1Lot27gIuuTWrFzboN51ABL2mo0Y3WJ4Gpfbd3FU_PkLzNTfjUv_tkVyzHOvpA1pUUaDxKpJjpA5uF4WWdEO-R5czrKRhqTr3BxvhMxtoDrbK498dYJLdWG4KZoMu3T6V9Dz6d)![](https://lh4.googleusercontent.com/hiJ4NMmDranfUH-WBw-953uKJmPMzACZbfIgqz0mbJrbOIESX1alEZmRESC9MQ3g5JIxsylQEZaiCidp9W8tQq_p3qMh_5ml3Oc6eCmZRrfCyVQ7L6HRn0AazKyfEr46Ivh4Mjae)
 
   
 
