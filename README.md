@@ -58,7 +58,7 @@ Creator’s Address:
 
 The address of the first Token’ Contract (MGT):
 
--   [0xdc3442c606678dca7a8bc91c7e2ee5afdf90a4e4](https://ropsten.etherscan.io/address/0xdc3442c606678dca7a8bc91c7e2ee5afdf90a4e4)
+-   [0x5e6be4af4ac6e5e00facee2a7ef20d6f5b4b12ed ](https://ropsten.etherscan.io/address/0x5e6be4af4ac6e5e00facee2a7ef20d6f5b4b12ed )
     
 
   
@@ -78,7 +78,7 @@ We used the same contract code, and specified the name, symbol and total Supply 
 The address of the second Token’s Contract (GMT):
 
     
--   [0x0deb0de1a48d15367d2ee0522384757117b9cf37](https://ropsten.etherscan.io/address/0x0deb0de1a48d15367d2ee0522384757117b9cf37)
+-   [0xe028f173be9cee18ab85e406366e936488f890b3 ](https://ropsten.etherscan.io/address/0xe028f173be9cee18ab85e406366e936488f890b3 )
     
   
 
@@ -106,7 +106,7 @@ After the implementation we deployed this Contract on Ropsten test network.
 
 The address of the exchange contract:
 
--   [0x7137de873b95937658e78ad2e01adcc57226e607](https://ropsten.etherscan.io/address/0x7137de873b95937658e78ad2e01adcc57226e607)
+-   [0x489f8667650c9ecff9be50298f82c6bd6a26b685 ](https://ropsten.etherscan.io/address/0x489f8667650c9ecff9be50298f82c6bd6a26b685 )
     
 
   
