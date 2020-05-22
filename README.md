@@ -6,7 +6,7 @@ Hi! This is an ERC20 token implementation as a template which can be used as ref
 # An Example of Exchange with 2 tokens
 ## Description of The Problem
 
-In this homework we will implement an ERC20 tokens, which are described as digital assets that is validated with a series of rules. These rules are stand for standardized functions. After creating our first ERC20 Token with a specific names, in my case it will be MehmetGultekinToken (MGT), we are going to deploy a second one and also name it specifically, in my case it will be GultekinMehmetToken (GMT).
+In this example we will implement an ERC20 tokens, which are described as digital assets that is validated with a series of rules. These rules are stand for standardized functions. After creating our first ERC20 Token with a specific names, in my case it will be MehmetGultekinToken (MGT), we are going to deploy a second one and also name it specifically, in my case it will be GultekinMehmetToken (GMT).
 
 #### Setup of Creator address:
 
