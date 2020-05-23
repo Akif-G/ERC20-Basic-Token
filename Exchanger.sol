@@ -20,7 +20,7 @@ contract Exchanger{
         House = msg.sender;
     }
 
-    /// @notice returns the contract cretor's address if needed. 
+    /// @notice returns the contract cretor's address if needed
     function getExchangerAddress()public view returns(address){
         return House;
     }
@@ -32,9 +32,9 @@ contract Exchanger{
 
     /// @notice transfers two tokens from contract addresses, an amount and permissions.
     /// @dev    requires validated permissions and enough token, from both House and User. House gets the spent token and gives the requested one.
-    /// @param  from_addrs address of the token that will be spent  
-    /// @param  from_addrs address of the token that will be spent  
-    /// @param  amount amount of the tokens that will be converted  
+    /// @param  from_addrs address of the token that will be spent
+    /// @param  to_addrs address of the token that will be converted to
+    /// @param  amount amount of the tokens that will be converted
     function transfer(address from_addrs, address to_addrs, uint256 amount) public returns(bool success){
         MehmetGultekinToken first = MehmetGultekinToken(from_addrs);
         MehmetGultekinToken second = MehmetGultekinToken(to_addrs);

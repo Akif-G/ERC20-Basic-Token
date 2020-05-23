@@ -8,7 +8,8 @@ Hi! This is an ERC20 token implementation as a template which can be used as ref
 
 In this example we will implement an ERC20 tokens, which are described as digital assets that is validated with a series of rules. These rules are stand for standardized functions. After creating our first ERC20 Token with a specific names, in my case it will be MehmetGultekinToken (MGT), we are going to deploy a second one and also name it specifically, in my case it will be GultekinMehmetToken (GMT).
 
-#### Setup of Creator address:
+#### Setup for a Creator address:
+>Note that, in this setup we used the same address for Creator's of both tokens and exchange Contract. But it was not necessary, since anyone who have both tokens could. deploy the exchange contract if allowances given... 
 
 ![](https://lh6.googleusercontent.com/a1IaZEtQD7SRFJusm0XAhwaph0RJvsb2cAYBVv2oK-0VWqWBOXBEbRl-8bde68D-S9l9auNh_Vt76hcsEES4K4fS49OULJz437aCLmKwzTcZm4w3F1cS9KWZgmeuecYOP1pPgyv4)
 
@@ -86,8 +87,9 @@ After Deploying the contract we gave our Customer 200 Token to spent.
 
 The initial look from Creator of the contracts and Mehmet Gultekin as a Customer.
 
-![](https://lh6.googleusercontent.com/0bPw1Iz-N_hgafE_VTOPRB7z8NTmz-K8qLgB0Kvlu9AUvxJ26MNdWdadGGaoBTjqQ1IGYKpECkRzA5cKNQ97QUeVI4t-IEVEJ8XhmE2IVSZ3uRQZcq9SPMv6aNJpHtLpEa4SOyJT)![](https://lh6.googleusercontent.com/X2Dpn8iROHAkNan4J0MCRgKUlW6mZJKOE1jXJHUv5vNr-wwjWXT3pOhdAvJLnKaw6qLf3ZdBS9zCNr93UV3dWIMeeiDlDma5vmyJOcv-uONyDCksg1YZtD0dJUum-1gixd478hbN)
+**![](https://lh5.googleusercontent.com/VI-VXN6zFBvGb8GIvI_e4KQxCUtrgr414tc2A19jsPmfPup0XB_-DAd3Fc0uESUvkBh0YpDJFSfVlwZxdlgbi5j3iW9uSbSKY6aNQGq4iWiz2lhzbVEdVh6QzHwdNIsnGFKuEiMs)![](https://lh6.googleusercontent.com/X2Dpn8iROHAkNan4J0MCRgKUlW6mZJKOE1jXJHUv5vNr-wwjWXT3pOhdAvJLnKaw6qLf3ZdBS9zCNr93UV3dWIMeeiDlDma5vmyJOcv-uONyDCksg1YZtD0dJUum-1gixd478hbN)**
 
+  
   
 ## Creating an Exchange Contract
 
@@ -115,9 +117,7 @@ After deploying the contract House needs to give approval to the exchange contra
 
   
   
-
-![](https://lh3.googleusercontent.com/aq5UF7v-WNXE-zoPvX1tSniw2h9dUA_FNyDpnX-e7x_sE7I-sobUqrCfrhunsim0ZL8D8k0A1YaATKAqkzvGnCApYTm5-V8xxeJEE30HvWbgZVpW7esVZlTO3UFKwTc0diA7Hl58)  ![](https://lh3.googleusercontent.com/leODF7AZICTTKWVH7BSzTjwpSBSlTOILB3BUsG8wU5QBxZYZYhHf5bIhhnGsjHs1fO5mp_SJS7RVmLXMLFOq9ZsExAOSt8INOKqoT8ykieW77gwOovmil-Xe2WPgTpb4v9rocSzA)
-
+ **![](https://lh3.googleusercontent.com/aq5UF7v-WNXE-zoPvX1tSniw2h9dUA_FNyDpnX-e7x_sE7I-sobUqrCfrhunsim0ZL8D8k0A1YaATKAqkzvGnCApYTm5-V8xxeJEE30HvWbgZVpW7esVZlTO3UFKwTc0diA7Hl58)  ![](https://lh3.googleusercontent.com/JM3KWBWBjG5PhmbbD7YQ2tYcKvxfF-5MAHWBqCtCct4gvnusbFuQO6dW0ZxAffKZuHiF6MS5J_Jxzbyee05s7yKr_kocLnQdv7Cof9VIHfWTwx852MWatkhaXFQjXXxL2VX0eajX)**
   
   
   
@@ -135,9 +135,7 @@ Firstly we need to give the exchange Contract an approval via token’ contracts
 
 Secondly, we can use transfer function of the Contract without hesitation. After this process the balances of Creator (as House) and the Customer (as Mehmet Gultekin) will be:
 
-![](https://lh4.googleusercontent.com/jl1Lot27gIuuTWrFzboN51ABL2mo0Y3WJ4Gpfbd3FU_PkLzNTfjUv_tkVyzHOvpA1pUUaDxKpJjpA5uF4WWdEO-R5czrKRhqTr3BxvhMxtoDrbK498dYJLdWG4KZoMu3T6V9Dz6d)![](https://lh4.googleusercontent.com/hiJ4NMmDranfUH-WBw-953uKJmPMzACZbfIgqz0mbJrbOIESX1alEZmRESC9MQ3g5JIxsylQEZaiCidp9W8tQq_p3qMh_5ml3Oc6eCmZRrfCyVQ7L6HRn0AazKyfEr46Ivh4Mjae)
-
-  
+ **![](https://lh5.googleusercontent.com/BNOyBxkfj3r80GwETCY6U8kohHCLlUlRNNQQeYeGfuKzSXznLcWH_R-rbeqIoe32hkgaXK24T56R0rjP2eFW0Jpo8K2xTuIDiKlp8TyY7xAbtM-0KYAGPnVsM98r4KdVthubSrxd)  ![](https://lh4.googleusercontent.com/hiJ4NMmDranfUH-WBw-953uKJmPMzACZbfIgqz0mbJrbOIESX1alEZmRESC9MQ3g5JIxsylQEZaiCidp9W8tQq_p3qMh_5ml3Oc6eCmZRrfCyVQ7L6HRn0AazKyfEr46Ivh4Mjae)**
 
  ## Conclusion
 
